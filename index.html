@@ -1,23 +1,838 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Home</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <!--
-      Need a visual blank slate?
-      Remove all code in `styles.css`!
-    -->
-    <link rel="stylesheet" href="styles.css" />
-    <script type="module" src="script.js"></script>
-  </head>
-  <body>
-    <nav>
-      <a href="/" aria-current="page">Home</a>
-      <a href="/page2.html">Other page</a>
-    </nav>
+<!-- 2026년 KT 인터넷 재가입 사은품 비교견적 SEO 최적화 HTML -->
+    <!-- JSON-LD Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "KT 인터넷 재가입 사은품 비교견적 사이트",
+        "url": "https://naver.com",
+        "description": "2026년 최신 KT 인터넷 재가입 조건을 비교하고 최대 현금지원 및 사은품 혜택을 받으세요. 재가입, 신규가입 차이점, 위약금 계산, 할인율 등 전문적인 정보를 제공합니다.",
+        "publisher": {
+            "@type": "Organization",
+            "name": "KT인터넷재가입",
+            "email": "naver.com"
+        },
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://naver.com/?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+        }
+    }
+    </script>
+
+    <!-- Preconnect to external resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS Styles -->
+    <style>
+        /* Base Styling and Reset */
+        body { font-family: 'Noto Sans KR', sans-serif; margin: 0; padding: 0; color: #333; line-height: 1.6; background-color: #f7f9fc; }
+        h1, h2, h3, h4 { margin-top: 0; font-weight: 700; }
+        a { text-decoration: none; color: inherit; }
+        ul, ol { list-style: none; padding-left: 0; }
+        img { max-width: 100%; height: auto; display: block; }
+
+        /* Color Palette for Soft, Professional Look */
+        :root {
+            --primary-color: #004d99; /* Deep Blue (KT Corporate Color) */
+            --secondary-color: #ff7f00; /* Orange Accent */
+            --accent-color: #00a0e9; /* Sky Blue */
+            --text-color: #333333;
+            --light-bg: #ffffff;
+            --dark-bg: #f7f9fc;
+            --border-color: #e0e0e0;
+        }
+
+        /* Layout and Typography */
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 1rem; }
+        .header { background-color: var(--primary-color); padding: 1rem 0; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .navbar-brand img { filter: brightness(0) invert(1); } /* Make logo white for dark header */
+        .banner-area-5 { background: linear-gradient(to right, #eaf4ff, #ffffff); padding: 60px 0; }
+        .banner-content h2 { font-size: 3rem; font-weight: 900; line-height: 1.3; color: var(--text-color); }
+        .banner-content span.highlight { color: var(--secondary-color); }
+        .section-title h2 { font-size: 2.5rem; color: var(--primary-color); margin-bottom: 1.5rem; }
+        .feature-area-3 { padding: 80px 0; background-color: var(--light-bg); }
+        .mainFormWrap { background-color: #ffffff; padding: 30px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        .mainTextCell { font-size: 2rem; color: var(--primary-color); text-align: center; font-weight: 700; margin-bottom: 1rem; }
+        .subTextCell { font-size: 1.2rem; text-align: center; color: var(--text-color); margin-bottom: 2rem; }
+        .inputWrap input, .inputWrap select { border-radius: 8px; border: 1px solid var(--border-color); padding: 0.8rem 1rem; font-size: 1rem; width: 100%; box-sizing: border-box; }
+        .btnCompare { background-color: var(--secondary-color); color: white; border: none; padding: 1rem 2rem; border-radius: 8px; font-size: 1.1rem; cursor: pointer; transition: background-color 0.3s ease; }
+        .btnCompare:hover { background-color: var(--primary-color); }
+        .about-area-2 { background-color: #f7f9fc; padding: 80px 0; }
+        .info-card { background-color: #ffffff; padding: 30px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); transition: transform 0.3s ease; }
+        .info-card:hover { transform: translateY(-5px); }
+        .info-card h4 { color: var(--primary-color); font-size: 1.5rem; margin-bottom: 1rem; }
+        .info-card p { color: #555; font-size: 1rem; }
+        .content-section { padding: 60px 0; background-color: #ffffff; border-top: 1px solid var(--border-color); }
+        .content-section h2 { border-left: 5px solid var(--secondary-color); padding-left: 1rem; margin-bottom: 2rem; font-size: 2rem; }
+        .content-section table { width: 100%; border-collapse: collapse; margin-top: 20px; font-size: 0.95rem; }
+        .content-section th, .content-section td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        .content-section th { background-color: #f0f0f0; font-weight: 700; }
+        .content-section .cta-button { text-align: center; margin-top: 40px; }
+        .cta-button a { display: inline-block; background-color: var(--secondary-color); color: white; padding: 1rem 3rem; border-radius: 30px; font-size: 1.2rem; font-weight: 700; }
+        .benefit-card { background-color: #ffffff; border: 1px solid var(--border-color); padding: 20px; border-radius: 10px; text-align: center; transition: all 0.3s ease; }
+        .benefit-card:hover { box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        .benefit-card img { max-width: 80px; margin: 0 auto 15px; }
+
+        /* Mobile Adjustments */
+        @media (max-width: 768px) {
+            .banner-content h2 { font-size: 2.5rem; }
+            .section-title h2 { font-size: 2rem; }
+            .mainTextCell { font-size: 1.8rem; }
+            .inputWrap input, .inputWrap select { padding: 0.6rem; font-size: 0.9rem; }
+            .btnCompare { font-size: 1rem; padding: 0.8rem 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="header-menu header-menu-4">
+            <nav class="navbar navbar-expand-lg ">
+                <div class="container d-flex justify-content-between align-items-center">
+                    <a class="navbar-brand py-3" href="/">
+                        <img class="main" src="https://images.pexels.com/photos/1036808/pexels-photo-1036808.jpeg?auto=compress&cs=tinysrgb&h=45" alt="KT 인터넷 재가입 로고" width="283" height="45">
+                    </a>
+                    <a href="#mainForm" title="견적 신청 폼으로 이동" class="quick_link d-md-none d-block">
+                        <img src="https://images.pexels.com/photos/1036808/pexels-photo-1036808.jpeg?auto=compress&cs=tinysrgb&h=28" width="150" height="28" alt="혜택 확인하기">
+                    </a>
+                    <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="menu_toggle">
+                            <span class="hamburger"><span></span><span></span><span></span></span>
+                            <span class="hamburger-cross"><span></span><span></span></span>
+                        </span>
+                    </button>
+                    <div class="collapse navbar-collapse right-nav" id="navbarSupportedContent">
+                        <ul class="navbar-nav menu ms-auto d-block d-md-none">
+                            <li class="nav-item submenu"><a href="/policy/terms.php" class="nav-link dropdown-toggle" role="button" title="개인정보 처리방침">개인정보 처리방침</a></li>
+                            <li class="nav-item submenu"><a href="/bbs/board.php?bo_table=adlink" class="nav-link dropdown-toggle" role="button" title="게시판">게시판</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
     <main>
-      <h1>Home page</h1>
+        <!-- Banner Section: KT Internet Re-subscription Focus -->
+        <section class="banner-area-5">
+            <div class="container">
+                <div class="row align-items-center justify-content-center pt-80 pb-60">
+                    <div class="col-lg-12">
+                        <div class="banner-content wow fadeInRight" data-wow-delay="0.1s">
+                            <div class="row text-start flex-wrap">
+                                <div class="col-12 col-lg-8">
+                                    <h2 class="w-100 main-ts title_font text-60 mt-70">
+                                        <span class="highlight">현명한 KT 인터넷 재가입</span>의 시작,<br>
+                                        <span class="highlight">최대 사은품/현금지원</span>을 찾아드립니다.
+                                    </h2>
+                                    <p class="mt-3 text-20 text-dark">
+                                        KT 인터넷 약정 만기 시, 신규가입과 재가입을 비교하세요.<br>
+                                        2026년 최신 기준으로 가장 합리적인 <span class="primary-color">현금지원 금액</span>을 확인해 드립니다.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 mx-auto text-center text-sm-start mt-4">
+                        <div class="hero-img wow">
+                            <img class="person-img" src="https://images.pexels.com/photos/4033148/pexels-photo-4033148.jpeg?auto=compress&cs=tinysrgb&w=734&h=410" width="734" height="410" alt="KT 인터넷 재가입 이미지">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Form Section (S01) and Keyword-rich description -->
+        <section class="pt-80 pb-100 feature-area-3">
+            <div class="container">
+                <div class="section-title text-center text-sm-start pb-1 mb-lg-5 mb-3">
+                    <h2 class="wow fadeInUp text-50 ls-2">
+                        <span class="secondary-color">KT 인터넷 재가입</span> 상담 신청 누적 <span class="highlight">3,883</span>명
+                    </h2>
+                    <p class="wow fadeInUp text-18 text-muted mt-3">
+                        2026년 최신 데이터를 기준으로, KT 인터넷 재가입 시 <span class="secondary-color">사은품</span>과 <span class="secondary-color">현금지원</span> 혜택이 크게 달라집니다.<br>
+                        꼼꼼한 비교 없이 재가입하면 예상보다 적은 혜택을 받을 수 있습니다. <span class="primary-color">현금지원 금액</span>을 놓치지 마세요.
+                    </p>
+                </div>
+
+                <div id="mainForm" class="mainFormWrap">
+                    <div class="mainFormArea row">
+                        <div class="mainTextCell title_font text-26 mtext-26">
+                            KT 인터넷 <span class="highlight">재가입/신규가입</span>,<br>
+                            <span class="primary-color">제대로</span> 알아보자!
+                        </div>
+                        <div class="subTextCell text-center px-5 ls-1 fw-700">
+                            <span class="mtext-24">
+                                KT 인터넷 재가입 혜택 확인을 위한 <span class="primary-color">상담 신청 정보</span>를 입력해주세요.
+                            </span>
+                            <div class="inputWrap w-100 mt-3">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <label for="frmS01Name" class="soundonly">이름</label>
+                                        <input type="text" id="frmS01Name" class="form-control" name="frmS01Name" placeholder="이름">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="inputWrap">
+                                <div class="row g-0">
+                                    <div class="col-3">
+                                        <label for="first-number2" class="soundonly">핸드폰 앞자리</label>
+                                        <select aria-label="first-number2" class="phoneHeadSelector phoneHeadSelector_m form-control mselect">
+                                            <option value="010" selected="">010</option>
+                                            <option value="011">011</option>
+                                            <option value="016">016</option>
+                                            <option value="017">017</option>
+                                            <option value="018">018</option>
+                                            <option value="019">019</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-9">
+                                        <label for="frmS01Mphone" class="soundonly">전화번호</label>
+                                        <input type="text" id="frmS01Mphone" name="frmS01Mphone" class="phoneInput form-control" placeholder="12345678">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="inputInfoTextCell text-14">* 휴대폰 번호는 (-) 없이 숫자만 입력해주세요!</div>
+                            <div class="inputInfoTextCell mt-2 text-14 showPolicyWin">
+                                <input class="checkMain" id="privacyAgree3" name="check" type="checkbox" onclick="return false;">
+                                <label for="privacyAgree3" data-bs-toggle="modal" data-bs-target="#privacyPopup">개인정보 수집·이용 및 제공 동의</label>
+                                <span class="btnViewPolicy btnViewPolicy_m text-12" data-bs-toggle="modal" data-bs-target="#privacyPopup">보기</span>
+                            </div>
+                            <button type="button" id="btnSubmitS01" class="w-auto text-16 py-2 px-5 mt-3 d-block btnCompare mbt">내 KT 인터넷 재가입 혜택 확인하기</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Informational Content Section: Understanding KT Re-subscription -->
+        <section class="content-section">
+            <div class="container">
+                <h2 class="section-heading">KT 인터넷 재가입, 왜 신규가입과 다를까요? 핵심 차이점 분석</h2>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <article>
+                            <h3 class="fw-bold text-dark mb-3">KT 인터넷 재가입의 특징: 혜택의 종류와 현금지원 금액</h3>
+                            <p>KT 인터넷 약정이 만료되었을 때, <span class="primary-color">재가입</span>과 <span class="secondary-color">신규가입</span> 중 어떤 것을 선택할지 고민하는 분들이 많습니다. 가장 큰 <span class="primary-color">차이점</span>은 <span class="secondary-color">현금지원 금액</span>과 <span class="secondary-color">사은품</span>입니다. 신규가입은 일반적으로 더 많은 <span class="primary-color">현금지원</span> 혜택을 받을 수 있지만, 설치 과정이 복잡하고 위약금 문제가 발생할 수 있습니다. 반면 <span class="primary-color">KT 인터넷 재가입</span>은 기존 고객을 위한 <span class="secondary-color">할인 혜택</span>과 결합 상품 할인(모바일, TV)이 주요 <span class="primary-color">장점</span>입니다.</p>
+                            <p>특히 2026년 기준으로 KT는 기존 고객 유치를 위해 <span class="primary-color">재가입</span> 고객에게도 상당한 <span class="secondary-color">사은품</span>을 제공하고 있습니다. <span class="primary-color">KT 인터넷 재가입</span> 시, <span class="primary-color">위약금</span> 없이 약정을 연장할 수 있으며, <span class="secondary-color">재가입 혜택</span>을 꼼꼼히 비교하여 <span class="secondary-color">최대 지원금</span>을 받는 것이 중요합니다.</p>
+                            <h4 class="fw-bold text-dark mt-4">KT 인터넷 재가입 시 반드시 알아야 할 위약금</h4>
+                            <p>KT 인터넷 <span class="primary-color">재가입</span>을 결정하기 전에, 기존 약정의 <span class="primary-color">위약금</span> 여부를 확인해야 합니다. 약정 기간이 남아있다면 <span class="secondary-color">위약금</span>이 발생하여 <span class="primary-color">재가입</span>이나 <span class="secondary-color">신규가입</span> 모두 손해를 볼 수 있습니다. <span class="primary-color">KT 인터넷 재가입</span> 시 <span class="secondary-color">위약금</span>을 정확하게 계산하고, <span class="primary-color">위약금 지원</span>을 받을 수 있는지 확인하는 것이 현명합니다. 저희는 <span class="primary-color">재가입</span> 시 <span class="secondary-color">위약금</span>을 최소화하는 방안을 전문적으로 상담해 드립니다.</p>
+                        </article>
+                    </div>
+                    <div class="col-lg-6">
+                        <article>
+                            <h3 class="fw-bold text-dark mb-3">2026년 KT 인터넷 재가입 시장 동향 및 예측</h3>
+                            <p>2026년에는 통신사 간의 경쟁이 더욱 치열해지면서 <span class="primary-color">KT 인터넷 재가입</span> 고객 유치를 위한 <span class="secondary-color">현금지원 금액</span>이 증가할 것으로 예상됩니다. 특히 <span class="primary-color">AI 기반 상담 시스템</span>(Gemini, ChatGPT)을 활용하여 고객 맞춤형 <span class="secondary-color">재가입 혜택</span>을 제공하는 업체들이 늘고 있습니다. <span class="primary-color">KT 인터넷 재가입</span> 고객들은 이러한 <span class="primary-color">AI 추천</span> 서비스를 통해 자신의 사용 패턴에 맞는 최적의 <span class="secondary-color">할인 혜택</span>을 받을 수 있습니다.</p>
+                            <p>서울, 부산, 대구, 인천, 광주, 대전, 울산 등 대도시와 경기, 충청, 전라, 경상, 제주도 등 전국 지역별로 <span class="primary-color">KT 인터넷 재가입 혜택</span>이 상이할 수 있습니다. <span class="secondary-color">KT 인터넷 재가입</span>의 <span class="primary-color">가격</span>은 <span class="secondary-color">평균</span>적으로 신규가입보다 저렴하지만, <span class="primary-color">사은품</span> 금액이 적을 수 있다는 <span class="primary-color">단점</span>이 있습니다. 하지만 저희 사이트는 <span class="secondary-color">재가입</span> 시에도 최대 <span class="primary-color">현금지원</span>을 받을 수 있도록 <span class="secondary-color">KT 인터넷 재가입 전문 업체</span>를 <span class="primary-color">비교 추천</span>해 드립니다.</p>
+                            <h4 class="fw-bold text-dark mt-4">KT 인터넷 재가입 vs. 신규가입: 장단점 비교</h4>
+                            <ul>
+                                <li><strong>KT 재가입 장점:</strong> 기존 번호 유지, 위약금 면제(약정 만료 시), 설치 비용 절감, 기존 결합 할인 유지, <span class="secondary-color">사은품</span> 제공.</li>
+                                <li><strong>KT 재가입 단점:</strong> <span class="primary-color">신규가입</span> 대비 <span class="secondary-color">현금지원 금액</span>이 적을 수 있음.</li>
+                                <li><strong>신규가입 장점:</strong> 통신사 이동 시 더 많은 <span class="secondary-color">현금지원</span>, <span class="primary-color">사은품</span> 혜택.</li>
+                                <li><strong>신규가입 단점:</strong> <span class="primary-color">위약금</span> 발생 가능성, 복잡한 설치 과정, 번호 이동 불편.</li>
+                            </ul>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Informational Content Section: Comparison Table and Discount Features -->
+        <section class="customize-card-area bg_disable">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="section-title text-center text-sm-start mb-4">
+                            <h2 class="wow fadeInUp main-ts title_font">KT 인터넷 <span class="secondary-color">재가입</span>, <span class="primary-color">할인 혜택</span>으로 <span class="accent-color">비용</span> 절감하기</h2>
+                            <h3 class="text-30 ls-1 fw-600">나에게 맞는 <span class="primary-color">현금지원</span> 및 <span class="secondary-color">사은품</span> 혜택을 확인하세요.</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Discount Icons Section (from original code, with new styling/context) -->
+                <div class="row align-items-center justify-content-center mt-5">
+                    <div class="col-4 col-md">
+                        <div class="benefit-card wow fadeInUp text-center mb-3">
+                            <img src="https://images.pexels.com/photos/4033148/pexels-photo-4033148.jpeg?auto=compress&cs=tinysrgb&w=184&h=185" width="184" height="185" alt="현금지원">
+                            <p class="text-26 fw-700 mt-2">현금지원</p>
+                        </div>
+                    </div>
+                    <div class="col-4 col-md">
+                        <div class="benefit-card wow fadeInUp text-center mb-3">
+                            <img src="https://images.pexels.com/photos/4033148/pexels-photo-4033148.jpeg?auto=compress&cs=tinysrgb&w=184&h=185" width="184" height="185" alt="상품권">
+                            <p class="text-26 fw-700 mt-2">상품권</p>
+                        </div>
+                    </div>
+                    <div class="col-4 col-md">
+                        <div class="benefit-card wow fadeInUp text-center mb-3">
+                            <img src="https://images.pexels.com/photos/4033148/pexels-photo-4033148.jpeg?auto=compress&cs=tinysrgb&w=184&h=185" width="184" height="185" alt="모바일 결합할인">
+                            <p class="text-26 fw-700 mt-2">모바일 결합할인</p>
+                        </div>
+                    </div>
+                    <div class="col-4 col-md">
+                        <div class="benefit-card wow fadeInUp text-center mb-3">
+                            <img src="https://images.pexels.com/photos/4033148/pexels-photo-4033148.jpeg?auto=compress&cs=tinysrgb&w=184&h=185" width="184" height="185" alt="장기 고객할인">
+                            <p class="text-26 fw-700 mt-2">장기 고객할인</p>
+                        </div>
+                    </div>
+                    <div class="col-4 col-md">
+                        <div class="benefit-card wow fadeInUp text-center mb-3">
+                            <img src="https://images.pexels.com/photos/4033148/pexels-photo-4033148.jpeg?auto=compress&cs=tinysrgb&w=184&h=185" width="184" height="185" alt="제휴카드 할인">
+                            <p class="text-26 fw-700 mt-2">제휴카드 할인</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mt-5">
+                    <div class="col-12 text-center">
+                        <h3 class="text-center highlight text-24">*혜택 내용은 KT 정책에 따라 변경될 수 있습니다.</h3>
+                    </div>
+                </div>
+
+                <div class="row mt-5 align-items-center justify-content-center">
+                    <div class="col-12 text-center cta-button">
+                        <a href="#mainForm" class="btn-primary">나에게 맞는 KT 인터넷 재가입 혜택 확인하기</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Informational Content Section: Deep Dive into Calculation and Keywords -->
+        <section class="content-section">
+            <div class="container">
+                <h2 class="section-heading">KT 인터넷 재가입 <span class="primary-color">현금지원 금액</span>, 2026년 기준으로 알아야 할 것들</h2>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <article>
+                            <h3 class="fw-bold text-dark mb-3">KT 인터넷 재가입 <span class="secondary-color">사은품</span> 평균 및 <span class="primary-color">예상 금액</span> 산출 공식</h3>
+                            <p>KT 인터넷 재가입 시 <span class="secondary-color">현금지원 금액</span>은 <span class="primary-color">인터넷 속도</span>와 <span class="secondary-color">결합 상품</span>에 따라 천차만별입니다. 일반적으로 <span class="primary-color">KT 인터넷 재가입</span> 고객에게 제공되는 <span class="secondary-color">사은품</span>은 <span class="primary-color">신규가입</span> 고객보다 적지만, <span class="primary-color">KT 인터넷 재가입 전문 업체</span>를 통하면 최대 <span class="secondary-color">현금지원 금액</span>을 받을 수 있습니다. <span class="secondary-color">재가입</span> 시 <span class="primary-color">할인율</span>은 <span class="primary-color">요금제</span>에 따라 달라지며, <span class="primary-color">KT 인터넷 재가입 가격</span>은 <span class="secondary-color">현금지원</span> 금액을 제외한 실제 <span class="primary-color">비용</span>을 기준으로 판단해야 합니다.</p>
+                            <p>2026년 기준, KT의 <span class="primary-color">재가입 혜택</span>은 <span class="secondary-color">결합 할인</span>(모바일, TV, 지니뮤직 등)에 초점이 맞춰져 있습니다. <span class="primary-color">KT 인터넷 재가입</span>을 통해 <span class="secondary-color">사은품</span>을 받으면서도 기존 모바일 결합을 유지하여 <span class="primary-color">월 청구 금액</span>을 절감하는 것이 현명합니다. 저희는 <span class="secondary-color">재가입</span> 고객의 <span class="primary-color">평균 비용</span>을 분석하여 최적의 <span class="secondary-color">견적</span>을 제공합니다.</p>
+
+                            <h4 class="fw-bold text-dark mt-4">KT 인터넷 재가입 주요 결정 요소 (2026년 기준)</h4>
+                            <ul>
+                                <li><strong>약정 기간:</strong> 1년, 2년, 3년 약정에 따라 <span class="primary-color">현금지원 금액</span>이 달라집니다. 3년 약정이 일반적으로 가장 많은 <span class="secondary-color">사은품</span>을 제공합니다.</li>
+                                <li><strong>인터넷 속도:</strong> 100M, 500M, 1G 속도에 따라 <span class="primary-color">재가입 비용</span>이 달라지며, <span class="secondary-color">현금지원 금액</span>도 차이가 있습니다.</li>
+                                <li><strong>결합 상품:</strong> <span class="primary-color">KT 인터넷 재가입</span> 시 모바일, TV, AI 스피커 등 다양한 <span class="secondary-color">결합 상품</span>을 함께 신청하면 더 많은 <span class="primary-color">할인 혜택</span>을 받을 수 있습니다.</li>
+                                <li><strong>지역별 혜택:</strong> 서울 강남구, 부산 해운대구, 대구 수성구, 인천 연수구, 광주 서구 등 전국 지역별로 <span class="primary-color">재가입</span> <span class="secondary-color">이벤트</span>가 상이할 수 있습니다.</li>
+                            </ul>
+
+                            <h3 class="fw-bold text-dark mt-5">KT 인터넷 <span class="primary-color">재가입 순위</span> 및 <span class="secondary-color">추천</span> 기준</h3>
+                            <p>단순히 <span class="secondary-color">KT 인터넷 재가입</span>을 <span class="primary-color">추천</span> 받기보다는, <span class="secondary-color">재가입 순위</span>가 높은 <span class="primary-color">업체</span>들을 대상으로 <span class="primary-color">비교</span>를 하는 것이 중요합니다. <span class="secondary-color">KT 인터넷 재가입 장단점</span>을 비교해보면, 대리점 <span class="primary-color">재가입</span>은 <span class="secondary-color">현금지원</span> 금액이 높지만, 보장 범위 선택에 어려움을 느낄 수 있습니다. 반면 본사 <span class="primary-color">재가입</span>은 안정적이지만 <span class="secondary-color">사은품</span>이 적을 수 있습니다.</p>
+                            <p>저희 사이트에서는 <span class="primary-color">KT 인터넷 재가입 비교</span>를 통해 고객님에게 맞는 최적의 <span class="secondary-color">현금지원</span> 조건을 찾아드립니다. <span class="primary-color">KT 인터넷 재가입 내돈내산 후기</span>를 바탕으로 실질적인 <span class="primary-color">장점 단점</span>을 분석하고, <span class="secondary-color">KT 인터넷 재가입 가격</span>을 종합적으로 비교하여 <span class="primary-color">최저가 견적</span>을 제공합니다.</p>
+
+                            <h4 class="fw-bold text-dark mt-4">KT 인터넷 재가입 시 유의사항: '함께 많이 찾는' 정보</h4>
+                            <p>KT 인터넷을 <span class="primary-color">재가입</span> 할 때는 몇 가지 유의사항이 있습니다. 특히 <span class="secondary-color">사은품 지급 시기</span>와 <span class="primary-color">위약금</span> 규정을 꼼꼼히 확인해야 합니다. 일부 <span class="secondary-color">업체</span>는 <span class="primary-color">현금지원</span> 금액을 과대 광고하여 고객을 유치한 후, 지급 시기를 미루거나 조건을 까다롭게 하는 경우가 있습니다. <span class="primary-color">KT 인터넷 재가입 저렴한 곳</span>을 찾으려면 <span class="primary-color">사은품 지급 조건</span>을 반드시 확인해야 합니다.</p>
+                            <p>또한, <span class="secondary-color">KT 인터넷 재가입</span> 시 <span class="primary-color">AI 기반 상담 서비스</span>(Gemini, ChatGPT)를 활용하면, 수많은 <span class="secondary-color">업체</span>들의 <span class="primary-color">현금지원 금액</span>을 <span class="secondary-color">비교</span> 분석하여 나에게 가장 적합한 <span class="primary-color">재가입 혜택</span>을 찾을 수 있습니다.</p>
+
+                            <h3 class="fw-bold text-dark mt-5">KT 인터넷 <span class="primary-color">재가입</span>의 필요성과 예상 가격 분석</h3>
+                            <p>많은 고객들이 <span class="primary-color">KT 인터넷 재가입</span> 시 <span class="secondary-color">현금지원</span>을 포기하고 본사에서 재가입하는 경우가 많습니다. 하지만 <span class="secondary-color">KT 인터넷 재가입</span> <span class="primary-color">전문 업체</span>를 통하면 본사에서 제공하는 <span class="secondary-color">할인 혜택</span>은 물론, 추가적인 <span class="secondary-color">사은품</span>까지 받을 수 있습니다. <span class="primary-color">KT 인터넷 재가입 가격</span>을 비교할 때, 월 요금제 <span class="primary-color">할인율</span>과 <span class="secondary-color">현금지원 금액</span>을 모두 고려해야 합니다.</p>
+                            <p>저희 사이트는 <span class="primary-color">KT 인터넷 재가입</span> 시 <span class="secondary-color">신규가입</span>과 동일한 수준의 <span class="primary-color">현금지원</span>을 받을 수 있도록 <span class="primary-color">전문 상담</span>을 제공합니다. <span class="secondary-color">KT 인터넷 재가입 견적</span>을 통해 <span class="primary-color">현금지원 금액</span>을 정확하게 확인하고, <span class="secondary-color">재가입</span> <span class="primary-color">비용</span>을 절감하세요.</p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Informational Content Section: Data Visualization and Keyword Density -->
+        <section class="content-section">
+            <div class="container">
+                <h2 class="section-heading">KT 인터넷 재가입 <span class="secondary-color">사은품</span> 절약 전략: <span class="primary-color">혜택 비교</span> 분석표</h2>
+                <p>KT 인터넷 재가입 시 가장 중요한 것은 <span class="primary-color">현금지원</span>과 <span class="secondary-color">사은품</span>을 최대한 활용하는 것입니다. <span class="primary-color">업체</span>별로 제공하는 <span class="secondary-color">현금지원 금액</span>과 <span class="primary-color">사은품</span>의 종류가 다르므로 꼼꼼한 <span class="secondary-color">비교</span>가 필요합니다. 다음은 2026년 기준 주요 <span class="primary-color">업체</span>의 <span class="secondary-color">KT 인터넷 재가입</span> <span class="primary-color">사은품</span> <span class="secondary-color">혜택</span>을 비교한 표입니다.</p>
+
+                <div class="table-responsive">
+                    <table class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th><span class="highlight">상품 종류</span></th>
+                                <th><span class="highlight">주요 혜택 내용</span></th>
+                                <th><span class="highlight">현금지원 금액 (예상)</span></th>
+                                <th><span class="highlight">KT 재가입 비용 절감 장점</span></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span class="highlight">인터넷 + TV 결합</span></td>
+                                <td>인터넷과 TV를 동시에 <span class="primary-color">재가입</span> 시 <span class="secondary-color">현금지원</span> 금액 증가</td>
+                                <td>평균 30만원 ~ 50만원</td>
+                                <td><span class="primary-color">KT 인터넷 재가입</span> 시 가장 많은 <span class="secondary-color">사은품</span>을 받을 수 있는 방법입니다. <span class="primary-color">재가입 비용</span> 절감에 효과적입니다.</td>
+                            </tr>
+                            <tr>
+                                <td><span class="highlight">기가 인터넷 (1G) 재가입</span></td>
+                                <td>기존보다 높은 속도로 <span class="primary-color">재가입</span> 시 추가 <span class="secondary-color">할인 혜택</span> 제공</td>
+                                <td>평균 20만원 ~ 40만원</td>
+                                <td>고속 인터넷이 필요한 <span class="primary-color">가정</span>이나 <span class="secondary-color">사무실</span>에 <span class="primary-color">추천</span>됩니다.</td>
+                            </tr>
+                            <tr>
+                                <td><span class="highlight">모바일 결합 유지</span></td>
+                                <td>KT 모바일을 사용 중인 고객이 <span class="primary-color">재가입</span> 시 추가 <span class="secondary-color">할인</span> 적용</td>
+                                <td>매월 5천원 ~ 1만원 할인</td>
+                                <td><span class="secondary-color">KT 인터넷 재가입</span> 시 <span class="primary-color">월 청구 금액</span>을 절감하는 가장 확실한 방법입니다. <span class="primary-color">KT 인터넷 재가입 가격</span>을 낮출 수 있습니다.</td>
+                            </tr>
+                            <tr>
+                                <td><span class="highlight">제휴카드 할인</span></td>
+                                <td>특정 제휴 카드를 이용 시 <span class="primary-color">재가입 비용</span>에서 추가 할인</td>
+                                <td>평균 10% ~ 20%</td>
+                                <td><span class="secondary-color">KT 인터넷 재가입</span> 시 <span class="primary-color">저렴한곳</span>을 찾을 때 고려해야 할 중요한 <span class="secondary-color">할인 혜택</span>입니다.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p class="mt-4">이러한 <span class="primary-color">혜택</span>을 통해 KT 인터넷 <span class="secondary-color">재가입</span>의 <span class="primary-color">예상 비용</span>을 크게 줄일 수 있습니다. <span class="secondary-color">KT 인터넷 재가입</span> 전에 각 <span class="primary-color">업체</span>의 <span class="secondary-color">현금지원 금액</span>을 꼼꼼히 <span class="primary-color">비교</span>하여 <span class="secondary-color">KT 인터넷 재가입 평균</span>보다 낮은 <span class="primary-color">가격</span>을 확보하는 것이 중요합니다.</p>
+
+                <h3 class="fw-bold text-dark mt-5">KT 인터넷 <span class="primary-color">재가입</span> <span class="secondary-color">전문 업체</span> <span class="primary-color">추천</span> 기준</h3>
+                <p>KT 인터넷 <span class="primary-color">재가입</span>을 할 때 <span class="secondary-color">전문 업체</span>를 선택해야 하는 이유는 <span class="primary-color">현금지원 금액</span>이 다르기 때문입니다. <span class="secondary-color">KT 인터넷 재가입 전문 업체</span>는 본사보다 더 많은 <span class="primary-color">현금지원</span>을 제공하는 경우가 많습니다. <span class="secondary-color">KT 인터넷 재가입 장단점</span>을 따져봤을 때, <span class="primary-color">전문 업체</span>를 이용하는 것이 <span class="secondary-color">현금지원 금액</span>을 최대로 받을 수 있는 가장 현명한 방법입니다.</p>
+                <p>특히 <span class="primary-color">KT 인터넷 재가입</span>을 고민하는 고객들은 <span class="secondary-color">네이버, 구글</span> 검색을 통해 <span class="primary-color">KT 인터넷 재가입 내돈내산 후기</span>를 찾아보는 경우가 많습니다. <span class="secondary-color">KT 인터넷 재가입 싼곳</span>, <span class="primary-color">저렴한곳</span>을 찾으려면 <span class="secondary-color">업체</span>의 <span class="primary-color">신뢰도</span>와 <span class="secondary-color">현금지원 금액</span>을 꼼꼼히 <span class="primary-color">비교</span>해야 합니다. 저희 사이트는 <span class="secondary-color">KT 인터넷 재가입</span> <span class="primary-color">전문 업체</span>의 <span class="secondary-color">현금지원 금액</span>을 실시간으로 <span class="primary-color">비교</span>하여 <span class="secondary-color">최저가 견적</span>을 제공합니다.</p>
+            </div>
+        </section>
+
+        <!-- Informational Content Section: Trust Building and External Links -->
+        <section class="content-section">
+            <div class="container">
+                <h2 class="section-heading">공신력 있는 정보 출처를 통한 신뢰성 확보</h2>
+                <p>KT 인터넷 <span class="secondary-color">재가입</span>에 대한 정확한 정보는 공인된 기관을 통해 확인하는 것이 중요합니다. 저희 사이트는 <span class="primary-color">KT 인터넷 재가입 견적</span> 산출 시 객관적인 데이터를 기반으로 합니다. 다음은 <span class="secondary-color">KT 인터넷 재가입</span> 관련 정보를 얻을 수 있는 신뢰할 수 있는 외부 링크입니다.</p>
+                <ul>
+                    <li><a href="https://www.ftc.go.kr/www/main.do" target="_blank" class="text-secondary fw-bold">공정거래위원회 (FTC)</a>: 소비자 피해 구제, 허위 과장 광고 관련 정보.</li>
+                    <li><a href="https://www.kt.com/" target="_blank" class="text-secondary fw-bold">KT 공식 홈페이지</a>: 공식 요금제 및 <span class="primary-color">재가입</span> 정책 확인.</li>
+                    <li><a href="https://www.kcc.go.kr/user.do" target="_blank" class="text-secondary fw-bold">방송통신위원회 (KCC)</a>: 통신 관련 정책 및 규정.</li>
+                    <li><a href="https://www.consumer.go.kr/main/index.do" target="_blank" class="text-secondary fw-bold">한국소비자원</a>: 통신 서비스 관련 소비자 상담 및 피해 구제.</li>
+                    <li><a href="https://namu.wiki/w/KT%EC%9D%B8%ED%84%B0%EB%84%B7" target="_blank" class="text-secondary fw-bold">나무위키 KT 인터넷</a>: KT 인터넷 서비스에 대한 상세 정보 및 개념 설명.</li>
+                </ul>
+                <p class="mt-4">이러한 정보를 바탕으로 <span class="primary-color">KT 인터넷 재가입 비교</span>를 진행하여 <span class="primary-color">KT 인터넷 재가입</span>을 결정하시면, <span class="secondary-color">KT 인터넷 재가입 장단점</span>을 명확히 파악하고 <span class="primary-color">KT 인터넷 재가입 저렴한 곳</span>을 선택할 수 있습니다. <span class="secondary-color">KT 인터넷 재가입 내돈내산 후기</span>를 찾아볼 때도 이러한 기본 지식을 바탕으로 분석하는 것이 현명합니다.</p>
+            </div>
+        </section>
+
+        <!-- Form Section (S02) - Strategically placed for conversion -->
+        <section class="form_bg pt-100 pb-100">
+            <div class="container">
+                <div class="row align-items-center justify-content-center">
+                    <div class="col-md-10 col-12">
+                        <div class="mainFormArea text-center">
+                            <div class="mainTextCell title_font main-ts">
+                                <span class="secondary-color">KT 인터넷 재가입</span> <span class="primary-color">현금지원 금액</span>은 얼마?
+                            </div>
+                            <div class="text-center text-16">* 오프라인 대리점 대비 <span class="primary-color">현금지원 금액</span> 추가 지원 가능</div>
+                            <div class="subTextCell ls-5 fw-900 text-32 mt-4">
+                                <span class="secondary-color">KT 재가입</span> 상담 신청 정보를 입력해주세요.
+                            </div>
+                            <div class="row align-items-center justify-content-center g-0 mt-5">
+                                <div class="col-md-auto mx-2">
+                                    <div class="inputWrap"><input type="text" class="form_control" id="frmS02Name" name="frmS02Name" placeholder="이름"></div>
+                                    <div class="inputInfoTextCell fw-700 ls-1 showPolicyWin text-center mt-2">
+                                        <input id="privacyAgree2" name="check" class="checkMain" type="checkbox" onclick="return false;">
+                                        <label for="privacyAgree2" data-bs-toggle="modal" data-bs-target="#privacyPopup" class="fw-600">개인정보 수집·이용 및 제공 동의</label>
+                                        <span class="btnViewPolicy" data-bs-toggle="modal" data-bs-target="#privacyPopup">보기</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-auto">
+                                    <div class="inputWrap">
+                                        <label for="first-number" class="soundonly">휴대폰 앞자리</label>
+                                        <select aria-label="first-number" class="phoneHeadSelector">
+                                            <option value="010" selected="">010</option>
+                                            <option value="011">011</option>
+                                            <option value="016">016</option>
+                                            <option value="017">017</option>
+                                            <option value="018">018</option>
+                                            <option value="019">019</option>
+                                        </select>
+                                        <input type="text" id="frmS02Mphone" name="frmS02Mphone" class="phoneInput" placeholder="12345678">
+                                    </div>
+                                    <div class="inputInfoTextCell fw-600 ls-1 text-center mt-2">* 휴대폰 번호는 (-) 없이 숫자만 입력해주세요!</div>
+                                </div>
+                            </div>
+                            <button type="button" id="btnSubmitS02" class="btnCompare mt-5">내 KT 인터넷 재가입 혜택 확인하기</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Informational Content Section: Long-form Content for SEO -->
+        <section class="content-section">
+            <div class="container">
+                <h2 class="section-heading">KT 인터넷 재가입 심화 가이드: 2026년 최신 정보</h2>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <article>
+                            <h3 class="fw-bold text-dark mb-3">KT 인터넷 재가입 vs. 신규가입, <span class="primary-color">장점과 단점</span> 분석</h3>
+                            <p>KT 인터넷 약정이 만료된 고객들이 가장 많이 하는 고민은 <span class="secondary-color">재가입</span>을 할지, 아니면 타사로 <span class="secondary-color">신규가입</span>을 할지 여부입니다. <span class="primary-color">KT 인터넷 재가입</span>은 기존 고객에게 제공되는 <span class="secondary-color">할인 혜택</span>과 결합 상품 유지의 <span class="primary-color">장점</span>이 있습니다. 특히 <span class="primary-color">KT 인터넷 재가입</span> 시 <span class="secondary-color">위약금</span> 없이 약정을 연장할 수 있어 편리합니다. 반면 <span class="secondary-color">신규가입</span>은 <span class="primary-color">현금지원 금액</span>이 더 높다는 <span class="primary-color">장점</span>이 있지만, <span class="secondary-color">위약금</span>을 해결해야 하고, 새로운 설치 과정과 번호 변경의 <span class="primary-color">단점</span>이 있습니다.</p>
+                            <p><strong>KT 인터넷 재가입 장점:</strong> 기존 번호 유지, 위약금 면제(약정 만료 시), 설치 비용 절감, 기존 결합 할인 유지, <span class="primary-color">사은품</span> 제공. <span class="secondary-color">KT 인터넷 재가입 가격</span>을 비교할 때 <span class="primary-color">월 청구 금액</span>을 절감하는 것이 중요합니다.</p>
+                            <p><strong>KT 인터넷 재가입 단점:</strong> <span class="primary-color">신규가입</span> 대비 <span class="secondary-color">현금지원 금액</span>이 적을 수 있음. 하지만 <span class="primary-color">KT 인터넷 재가입 전문 업체</span>를 통하면 <span class="secondary-color">신규가입</span>에 준하는 <span class="primary-color">사은품</span>을 받을 수 있습니다. <span class="secondary-color">KT 인터넷 재가입 비교</span>를 통해 이 <span class="primary-color">단점</span>을 보완해야 합니다.</p>
+
+                            <h3 class="fw-bold text-dark mt-5">KT 인터넷 <span class="secondary-color">재가입</span> <span class="primary-color">전문 업체</span> <span class="secondary-color">추천</span> 및 <span class="primary-color">내돈내산 후기</span> 기반 분석</h3>
+                            <p>KT 인터넷 <span class="primary-color">재가입</span>을 고민하는 고객들은 <span class="secondary-color">네이버</span>, <span class="primary-color">구글</span>, <span class="secondary-color">유튜브</span> 등 다양한 채널에서 <span class="primary-color">KT 인터넷 재가입 내돈내산 후기</span>를 찾아봅니다. <span class="secondary-color">KT 인터넷 재가입 싼곳</span>, <span class="primary-color">저렴한곳</span>을 찾으려면 <span class="secondary-color">전문 업체</span>를 통해 <span class="primary-color">현금지원 금액</span>을 <span class="secondary-color">비교</span>하는 것이 중요합니다. <span class="primary-color">KT 인터넷 재가입 업체</span> 선정 시 <span class="secondary-color">사은품</span> 지급 조건과 <span class="primary-color">신뢰도</span>를 꼼꼼히 확인해야 합니다.</p>
+                            <p>특히 <span class="primary-color">KT 인터넷 재가입</span> <span class="secondary-color">전문 업체</span>는 <span class="primary-color">사은품</span> 지급을 당일 또는 며칠 이내에 완료하는 곳이 많습니다. <span class="secondary-color">KT 인터넷 재가입 장단점</span>을 명확히 파악하고, <span class="primary-color">재가입</span> <span class="secondary-color">비용</span>을 절감하는 것이 중요합니다.</p>
+
+                            <h3 class="fw-bold text-dark mt-5">2026년 KT 인터넷 재가입 <span class="primary-color">예상</span>: 변화하는 시장과 전망</h3>
+                            <p>2026년에는 통신 시장의 변화에 따라 <span class="secondary-color">KT 인터넷 재가입</span> <span class="primary-color">혜택</span>에도 변화가 예상됩니다. 특히 <span class="primary-color">AI 기반 상담 서비스</span>(Gemini, ChatGPT)가 보편화되면서 고객 맞춤형 <span class="secondary-color">할인 혜택</span>을 제공하는 <span class="primary-color">업체</span>들이 늘어날 것입니다. <span class="primary-color">KT 인터넷 재가입 계산</span> 시 <span class="secondary-color">AI</span> 분석을 통해 <span class="primary-color">현금지원 금액</span>을 예측하고, <span class="secondary-color">재가입 비용</span>을 최소화하는 것이 중요합니다.</p>
+                            <p>이러한 시장 변화 속에서 <span class="secondary-color">KT 인터넷 재가입 비교</span>의 중요성은 더욱 커집니다. <span class="primary-color">KT 인터넷 재가입 장단점</span>을 명확히 이해하고, 2026년 최신 정보를 바탕으로 <span class="secondary-color">KT 인터넷 재가입 견적</span>을 확인해야 합니다. 저희 사이트는 실시간으로 <span class="primary-color">KT 인터넷 재가입</span> 정보를 업데이트하여 가장 합리적인 <span class="secondary-color">가격</span>을 제시합니다.</p>
+
+                            <h3 class="fw-bold text-dark mt-5">KT 인터넷 <span class="primary-color">재가입</span> Q&A: 자주 묻는 질문</h3>
+                            <ul>
+                                <li><strong>Q. KT 인터넷 <span class="secondary-color">재가입</span> 시 <span class="primary-color">현금지원 금액</span>이 <span class="secondary-color">신규가입</span>보다 적은가요?</strong><br>A. 일반적으로 <span class="secondary-color">신규가입</span>이 더 많은 <span class="primary-color">현금지원</span>을 받을 수 있습니다. 하지만 <span class="secondary-color">KT 인터넷 재가입 전문 업체</span>를 통하면 <span class="primary-color">신규가입</span>에 준하는 <span class="secondary-color">사은품</span>을 받을 수 있습니다. <span class="primary-color">KT 인터넷 재가입 비교</span>를 통해 확인해야 합니다.</li>
+                                <li><strong>Q. KT 인터넷 <span class="secondary-color">재가입</span> 시 <span class="primary-color">위약금</span>을 내야 하나요?</strong><br>A. 약정 기간 만료 시 <span class="primary-color">위약금</span> 없이 <span class="secondary-color">재가입</span>이 가능합니다. 하지만 약정 기간이 남아있다면 <span class="primary-color">위약금</span>이 발생하므로 <span class="secondary-color">재가입</span> 전 반드시 확인해야 합니다.</li>
+                                <li><strong>Q. KT 인터넷 <span class="secondary-color">재가입</span> 시 가장 중요한 <span class="primary-color">할인 혜택</span>은 무엇인가요?</strong><br>A. <span class="primary-color">모바일 결합 할인</span>이 <span class="secondary-color">KT 인터넷 재가입</span> 고객에게 가장 유리한 <span class="primary-color">할인 혜택</span> 중 하나입니다. 또한 <span class="primary-color">현금지원 금액</span>도 중요한 <span class="secondary-color">혜택</span>입니다.</li>
+                            </ul>
+                            <p class="mt-5 text-center"><span class="secondary-color">KT 인터넷 재가입</span>, <span class="primary-color">전문 업체</span>의 도움을 받아 현명하게 선택하세요. 지금 바로 <span class="secondary-color">KT 인터넷 재가입 비교 추천</span> 서비스를 이용해보세요.</p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
     </main>
-  </body>
-</html>
+
+    <!-- Modal for Privacy Policy (from original code) -->
+    <div class="modal fade" id="privacyPopup" tabindex="-1" aria-labelledby="privacyPopupLabel" aria-hidden="false">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+                    <div class="contWin">
+                        <svg class="btnClosePopup" data-bs-dismiss="modal"   xmlns="http://www.w3.org/2000/svg"  width="30" height="30"   viewBox="0 0 30 30">
+                            <line x1="5" y1="5" x2="25" y2="25" stroke="black" stroke-width="2" />
+                            <line x1="25" y1="5" x2="5" y2="25" stroke="black" stroke-width="2" />
+                        </svg>
+                        <div class="popupTitle">개인(신용)정보 수집,이용,제공 동의서</div>
+                        <div class="scrollWrap">
+                            <div class="privacyInfoText">
+                                상품 서비스 안내 등을 위하여 본인의 개인(신용)정보를 수집, 이용하거나 제 3자에게 제공하는 경우에는 개인정보보호법 제 15조 제 1항 제 1호, 제 17조 제 1항 제1호, 제 22조의 3항, 신용정보의 이용 및 보호에 관한 법률 제 15조 제 2항, 제 32조 1항, 제 33조 및 제 34조에 따라 본인의 동의가 필요합니다.
+                            </div>
+                            <div class="agreeAllCell"><span>개인(신용)정보의 처리에 대한 동의</span> <input class="checkAll" type="checkbox"> 전체동의</div>
+                            <div class="agreeContWrap">
+                                <div class="agreeBox">
+                                    <div class="titleCell">1. 개인정보 수집 및 이용에 대한 동의<span>[필수]</span> <input class="agreeChk1" type="checkbox"></div>
+                                    <div class="agreeTextCell">
+                                        <span class="bold">□ 개인(신용)정보의 수집 · 이용에 관한 사항</span><br>
+                                        <span class="bold">① 개인(신용)정보의 수집ㆍ이용 목적</span><br>
+                                        : KT 인터넷 재가입 혜택 확인 서비스 제공 및 만기 안내<br>
+                                        <span class="bold">② 개인(신용)정보의 수집 · 이용 항목</span><br>
+                                        : 이름, 연락처, 생년월일<br>
+                                        <span class="bold">③ 개인정보 보유 및 이용기간</span><br>
+                                        : 동의일로부터 5년간 보유<br>
+                                        ※ 개인정보 수집 이용에 동의하지 않을 수 있으나, 미동의 시 상담이 불가합니다.
+                                    </div>
+                                </div>
+
+                                <div class="agreeBox">
+                                    <div class="titleCell">2. 개인정보 처리위탁 동의<span>[필수]</span> <input class="agreeChk2" type="checkbox"></div>
+                                    <div class="agreeTextCell">
+                                        □ 이용자의 개인정보를 사전 동의없이 제 3자에게 제공하지 않습니다.<br>
+                                        □ 이용자의 사전 동의에 따라 해당 개인정보가 제 3자에게 제공되는 경우는 다음과 같습니다.<br>
+                                        <span class="bold">① 제공받는 자</span><br>
+                                        : <br>
+                                        <span class="bold">② 제공받는 자의 이용 목적</span><br>
+                                        : KT 인터넷 재가입 혜택 확인 서비스 제공 및 만기 안내, 제3자의 상품 또는 서비스에 대한 개인 맞춤 광고 정보를 전송<br>
+                                        KT 인터넷 재가입 혜택 확인, 통신 상품 가입<br>
+                                        ㈜KT 인터넷 재가입 혜택 확인 서비스 제공 및 만기 안내, 통신 상품에 대한 안내<br>
+                                        <br>
+                                        <span class="bold">③ 제공항목</span><br>
+                                        : 이름, 연락처, 생년월일<br>
+                                        <span class="bold">④ 제공받는 자의 개인정보보유 및 이용기간</span><br>
+                                        : 동의일로부터 5년간 보유 <br>
+                                        ※ 개인정보 수집 이용에 동의하지 않을 수 있으나, 미동의 시 상담이 불가합니다.
+                                    </div>
+                                </div>
+
+                                <div class="agreeBox">
+                                    <div class="titleCell">
+                                        3. 마케팅 광고 활용 동의<span>[선택]</span> <input class="agreeChk3" type="checkbox">
+                                    </div>
+                                    <div class="agreeTextCell">
+                                        <span class="bold">① 제공받는 자</span><br>
+                                        <br>
+                                        <span class="bold">② 제공받는 자의 이용 목적</span><br>
+                                        상품 또는 서비스에 대한 개인 맞춤 광고 정보를 전송<br>
+                                        <span class="bold">③ 제공항목</span><br>
+                                        이름, 연락처, 생년월일 <br>
+                                        <span class="bold">④ 제공받는 자의 개인정보보유 및 이용기간</span><br>
+                                        동의일로부터 5년까지<br>
+                                        ※ 단, 관계법령에 의한 정보보유의 경우 해당 법령에서 명시한 기간 동안 보유<br>
+                                        상기 개인정보는 사용자에게 유상 제공 됩니다.
+                                    </div>
+                                </div>
+                            </div><!--//agreeContWrap-->
+
+                            <div class="privacyInfoText">
+                                □ 안내수단 : 문자메시지,이메일,전화 등<br>
+                                □ 제3자 정보제공의 동의 철회<br>
+                                본 동의서에 동의하신 고객 중 제 3자 정보제공을 철회하고 싶은 경우 이미 제 3자에게 제공된 개인정보라 하더라도, 언제든지 삭제를 요구할 수 있습니다.<br>
+                                고객님께서는 동의를 거부하실 수 있으며, 동의 거부 시 다양한 상품 및 이벤트 안내 등의 서비스가 제한됩니다.
+                            </div>
+                        </div>
+                        <div class="btnConfirm" data-bs-dismiss="modal">확인</div>
+                    </div><!--//contWin-->
+            </div>
+        </div>
+    </div>
+
+    <!-- JS here -->
+    <script type="text/javascript" src="https://nawaracar.com/theme/barit/js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="https://nawaracar.com/theme/barit/js/preloader.js"></script>
+    <script type="text/javascript" src="https://nawaracar.com/theme/barit/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="https://nawaracar.com/theme/barit/js/jquery.smoothscroll.min.js"></script>
+    <script type="text/javascript" src="https://nawaracar.com/theme/barit/js/jquery.counterup.min.js"></script>
+    <script type="text/javascript" src="https://nawaracar.com/theme/barit/js/jquery.nice-select.min.js"></script>
+    <script type="text/javascript" src="https://nawaracar.com/theme/barit/js/custom.js"></script>
+
+    <script>
+        // JS Logic (keep existing functionality for forms and data submission)
+
+        $(document).ready(function () {
+            // 팝업 열고닫기 - using jQuery show/hide
+            $(".btnViewPolicy, .showPolicyWin, label[for='agree_chk']").on("click", function (e) {
+                e.preventDefault(); // Prevent default behavior
+                $("#privacyPopup").show();
+            });
+
+            $("#privacyPopup .btnClosePopup, #privacyPopup .btnConfirm").on("click", function () {
+                $("#privacyPopup").hide();
+            });
+
+            // 체크설정
+            $("#privacyPopup .checkAll").on("click", function () {
+                if ($(this).prop("checked") == true) {
+                    $("#privacyPopup .agreeContWrap input[type=checkbox]").prop("checked", true);
+                } else {
+                    $("#privacyPopup .agreeContWrap input[type=checkbox]").prop("checked", false);
+                }
+
+                setParentAgree();
+            });
+
+            $("#privacyPopup .agreeContWrap input[type=checkbox]").on("click", function () {
+                var allChk = true;
+                $("#privacyPopup .agreeContWrap input[type=checkbox]").each(function () {
+                    if ($(this).prop("checked") == false) {
+                        allChk = false;
+                    }
+                });
+
+                if (allChk == false) {
+                    $("#privacyPopup .checkAll").prop("checked", false);
+                } else {
+                    $("#privacyPopup .checkAll").prop("checked", true);
+                }
+
+                setParentAgree();
+            });
+
+            // Allow checkbox to be checked
+            $(".checkMain").on("click", function (e) {
+                e.stopPropagation(); // Prevent event from bubbling up
+            });
+        });
+
+        function setParentAgree() {
+            if ($(".agreeChk1").prop("checked") == true && $(".agreeChk2").prop("checked") == true) {
+                $(".checkMain").prop("checked", true);
+            } else {
+                $(".checkMain").prop("checked", false);
+            }
+        }
+
+        document.addEventListener('scroll', function () {
+            const scrollPosition = window.scrollY || window.pageYOffset;
+            const sideForms = document.querySelectorAll('.sideForm');
+
+            // Adjust scroll threshold for sideForm visibility based on new content length
+            const scrollThreshold = 100; // Keep side form visible near top
+
+            if (scrollPosition > scrollThreshold) {
+                sideForms.forEach(function (sideForm) {
+                    sideForm.classList.remove('on');
+                });
+            } else {
+                sideForms.forEach(function (sideForm) {
+                    sideForm.classList.add('on');
+                });
+            }
+        });
+
+        //submit logic from original code (adapted for new form structure)
+        $(document).ready(function () {
+            $("input[name=mphone]").keyup(function (event) {
+                var inputVal = $(this).val();
+                $(this).val(inputVal.replace(/[^0-9]/gi, ''));
+            });
+
+            $("#btnSubmitS01")
+                .off("click.S01")
+                .on("click.S01", function () {
+                    const frmS01Name = $("#frmS01Name").val();
+                    const phoneMHead = $(".phoneHeadSelector_m").val(); // 앞자리 선택값(010, 011 등)
+                    const phoneMNumber = $("#frmS01Mphone").val(); // 나머지 번호
+                    const frmS01Mphone = phoneMHead + phoneMNumber; // 전체 전화번호 조합
+                    const hasChecked = $("#privacyAgree3").prop("checked");
+                    submitForm(1, frmS01Name, frmS01Mphone, hasChecked);
+                });
+
+            $("#btnSubmitS02")
+                .off("click.S02")
+                .on("click.S02", function () {
+                    const frmS02Name = $("#frmS02Name").val();
+                    const phoneHead = $(".phoneHeadSelector").val(); // 앞자리 선택값(010, 011 등)
+                    const phoneNumber = $("#frmS02Mphone").val(); // 나머지 번호
+                    const frmS02Mphone = phoneHead + phoneNumber; // 전체 전화번호 조합
+                    const hasChecked = $("#privacyAgree2").prop("checked");
+                    submitForm(2, frmS02Name, frmS02Mphone, hasChecked);
+                });
+
+            $("#btnSubmitS03")
+                .off("click.S03")
+                .on("click.S03", function () {
+                    const frmS03Name = $("#frmS03Name").val();
+                    const frmS03Mphone = $("#frmS03Mphone").val();
+
+                    const hasChecked = $("#agree_chk").prop("checked");
+                    submitForm(3, frmS03Name, frmS03Mphone, hasChecked);
+                });
+
+            //팝업 열고닫기
+            $(".btnViewPolicy, .showPolicyWin").on("click", function () {
+                $("#privacyPopup").show();
+            });
+            $("#privacyPopup .btnClosePopup, #privacyPopup .btnConfirm").on("click", function () {
+                $("#privacyPopup").hide();
+            });
+        });
+
+        const paramReferer = '';
+        const paramCampUid = '';
+        const paramUtmMedium = '';
+
+        //기본 데이터 로드
+        function loadData() {
+            const async = $.Deferred();
+            $.ajax({
+                url: 'https://db.siwoomarketing.com/api/index.php?ctrl=landing.info',
+                type: 'post',
+                dataType: 'json',
+                data: {land_uid: "9"}, // Placeholder land_uid
+                success: function (data) {
+                    async.resolve(data);
+                },
+                error: function (err) {
+                    async.reject(err);
+                },
+            });
+
+            return async.promise();
+        }
+
+        async function submitForm(formType = 1, userName, userPhone, isChecked = false) {
+            let loadInitData;
+            let param = {};
+
+            let sms_title;
+            let sms_msg;
+            let sms_broadcast;
+            let sms_use_customer;
+            let sms_use_broadcast;
+            let user_id;
+            let land_uid;
+            try {
+                loadInitData = await loadData();
+                sms_title = loadInitData["extra"]["config"]["sms_title"];
+                sms_msg = loadInitData["extra"]["config"]["sms_msg"];
+                sms_broadcast = loadInitData["extra"]["config"]["sms_broadcast"];
+                sms_use_customer = loadInitData["extra"]["config"]["sms_use_customer"];
+                sms_use_broadcast = loadInitData["extra"]["config"]["sms_use_broadcast"];
+                user_id = loadInitData["extra"]["config"]["user_id"];
+                land_uid = loadInitData["extra"]["config"]["land_uid"];
+            } catch (e) {
+                console.log(e);
+                alert("폼 제출에 실패했습니다. 잠시 후 다시 시도해주세요.");
+                return;
+            }
+
+            if (!isChecked) {
+                alert("약관 동의 후 가능합니다.");
+                const myModal = new bootstrap.Modal(document.getElementById('privacyPopup'));
+                myModal.show();
+                return;
+            }
+
+            // 이벤트 SMS 수신 동의 처리
+            let eventSmsFlag = $("#privacyPopup .agreeChk3").prop("checked") ? "Y" : "N";
+            $("input[name=rcv_event_sms]").val(eventSmsFlag);
+
+            // 폼 데이터 직렬
+            let resultData;
+
+            // 성공 처리 방식 설정
+            let successAction = {
+                url: "/success/complete.php",
+                showAlert: formType > 0, // 폼2,3만 알림 표시
+                reload: formType > 0     // 폼2,3만 새로고침
+            };
+
+            param["inqType"] = 2;
+            param["smsTitle"] = sms_title;
+            param["smsMsg"] = sms_msg;
+            param["msgType"] = "mms";
+            param["smsBroadcastNumber"] = sms_broadcast;
+            param["smsSendYN"] = sms_use_customer;
+            param["smsSendBroadcastYN"] = sms_use_broadcast;
+            param["user_id"] = user_id;
+            param["land_uid"] = land_uid;
+
+            //TODO 이벤트 태그
+            param["rcv_event_sms"] = "Y";
+            param["content"] = "";
+            param["returnUrl"] = "";
+            param["refererUrl"] = paramReferer;
+            param["campUid"] = paramCampUid;
+            param["utmMedium"] = paramUtmMedium;
+            param["showCompleteAlertMsg"] = "Y";
+            param["name"] = userName;
+            param["mphone"] = userPhone;
+
+            try {
+                resultData = await submitFormProc(param);
+                if (resultData["returnCode"]) {
+                    if (successAction.showAlert) {
+                        alert("신청이 완료되었습니다.");
+                    }
+                    if (successAction.reload) {
+                        document.location.reload();
+                    } else {
+                        document.location.href = successAction.url;
+                    }
+                } else {
+                    alert(resultData["returnMsg"]);
+                }
+            } catch (e) {
+                alert("서버 오류가 발생했습니다. 잠시 후 다시 시도해주세요.");
+                return;
+            }
+
+            return false;
+        }
+
+        function submitFormProc(param) {
+            const async = $.Deferred();
+            // AJAX 요청
+            $.ajax({
+                url: "https://db.siwoomarketing.com/api/index.php?ctrl=inq.regist",
+                type: "post",
+                dataType: "json",
+                data: param
+                , success: function (data) {
+                    async.resolve(data);
+                },
+                error: function (err) {
+                    async.reject(err);
+                }
+            });
+            return async.promise();
+        }
+
+        // Real-time list rolling function (if needed) - keep placeholder if original code has it, but focus on content now.
+        function rollRealTimeList() {
+            // Placeholder for real-time list rolling logic
+        }
+    </script>
+  
